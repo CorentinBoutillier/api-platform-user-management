@@ -1,0 +1,32 @@
+
+parameters:
+    password1: $argon2id$v=19$m=65536,t=6,p=1$W8BqAOgexK4RZvqa3a+dCQ$OpzBafRJZP90J4g0gjTL4+/P4pq6uf6Hwpdhbx5997Y
+
+App\Entity\User:
+    # API Login
+    valid_user:
+      firstname: test1
+      lastname: test1
+      uuid: <uuid()>
+      email: client@validated.email
+      password: '<{password1}>'
+      validatedEmail: true
+      enabled: true
+
+    not_validated_user:
+      firstname: test1
+      lastname: test1
+      uuid: <uuid()>
+      email: not@validated.email
+      password: '<{password1}>'
+      validatedEmail: false
+      enabled: true
+
+    disabled_user:
+      firstname: test1
+      lastname: test1
+      uuid: <uuid()>
+      email: client@disabled.email
+      password: '<{password1}>'
+      validatedEmail: true
+      enabled: false

@@ -1,0 +1,20 @@
+
+{% extends 'emails/template.html.twig' %}
+
+{% block content %}
+    <p>
+        You signed up with the following email:
+        <code>{{ user.email }}</code>
+    </p>
+
+    <a class="btn btn-primary"
+       href="{{ fontUrl }}/valid-email/{{ user.emailConfirmationUuid }}">
+        Click here to activate your account
+    </a>
+    <br>
+    <small>
+        Or copy this link into your favorite browser:
+        <br>
+        {{ fontUrl }}/valid-email/{{ user.emailConfirmationUuid }}
+    </small>
+{% endblock %}
