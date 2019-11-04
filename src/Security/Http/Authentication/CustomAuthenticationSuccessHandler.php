@@ -69,8 +69,6 @@ class CustomAuthenticationSuccessHandler implements AuthenticationSuccessHandler
             $response->setData($event->getData());
         }
 
-
-
         return $response;
     }
 }

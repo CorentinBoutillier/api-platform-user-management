@@ -79,6 +79,17 @@ use Symfony\Component\Validator\Constraints as Assert;
  *                              },
  *                          },
  *                      },
+ *                      "200"={
+ *                          "description"="Not valid account",
+ *                          "schema"={
+ *                              "type"="object",
+ *                              "properties"={
+ *                                   "token"={
+ *                                      "type"="string"
+ *                                   },
+ *                              },
+ *                          },
+ *                      },
  *                      "400"={
  *                          "description"="Bad request",
  *                          "schema"={
